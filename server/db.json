@@ -1334,40 +1334,85 @@
       "id": 1
     },
     {
-      "cityName": "Mahidasht",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "34.32869425037187",
-      "longitude": "46.724183117022086",
-      "host_location": "Mahidasht Iran (Islamic Republic of)",
-      "id": 4
-    },
-    {
-      "cityName": "Sanandaj",
-      "country": "Iran (Islamic Republic of)",
-      "countryCode": "IR",
-      "latitude": "35.31372444726279",
-      "longitude": "47.03114358752335",
-      "host_location": "Sanandaj Iran (Islamic Republic of)",
-      "id": 5
-    },
-    {
-      "cityName": "A Dakhla Oasis",
-      "country": "Egypt",
-      "countryCode": "EG",
-      "latitude": "25.02090651422749",
-      "longitude": "29.09059588509316",
-      "host_location": "A Dakhla Oasis Egypt",
-      "id": 7
-    },
-    {
-      "cityName": "Baba Kot",
-      "country": "Pakistan",
-      "countryCode": "PK",
-      "latitude": "28.43528783183169",
-      "longitude": "67.78003711374224",
-      "host_location": "Baba Kot Pakistan",
+      "cityName": "Hamburg",
+      "country": "Germany",
+      "countryCode": "DE",
+      "latitude": "53.46189043285914",
+      "longitude": "9.980046153099176",
+      "host_location": "Hamburg Germany",
       "id": 8
+    },
+    {
+      "cityName": "Mareil-en-France",
+      "country": "France",
+      "countryCode": "FR",
+      "latitude": "49.06666839558117",
+      "longitude": "2.423154327472528",
+      "host_location": "Mareil-en-France France",
+      "id": 10
+    },
+    {
+      "cityName": "’Ain Mabed",
+      "country": "Algeria",
+      "countryCode": "DZ",
+      "latitude": "34.74161249883172",
+      "longitude": "3.144545423621202",
+      "host_location": "’Ain Mabed Algeria",
+      "id": 12
+    },
+    {
+      "cityName": "Krokom",
+      "country": "Sweden",
+      "countryCode": "SE",
+      "latitude": "64.09860708598023",
+      "longitude": "14.910621895695382",
+      "host_location": "Krokom Sweden",
+      "id": 13
+    },
+    {
+      "cityName": "Denver",
+      "country": "United States of America (the)",
+      "countryCode": "US",
+      "latitude": "39.74415422820842",
+      "longitude": "-105.0068271098721",
+      "host_location": "Denver United States of America (the)",
+      "id": 14
+    },
+    {
+      "cityName": "Tehran",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "35.646137228802424",
+      "longitude": "51.5496950079222",
+      "host_location": "Tehran Iran (Islamic Republic of)",
+      "id": 15
+    },
+    {
+      "cityName": "Burbach",
+      "country": "Germany",
+      "countryCode": "DE",
+      "latitude": "52.24630137198303",
+      "longitude": "8.657226562500002",
+      "host_location": "Burbach Germany",
+      "id": 17
+    },
+    {
+      "cityName": "Torre Val de San Pedro",
+      "country": "Spain",
+      "countryCode": "ES",
+      "latitude": "41.00477542222949",
+      "longitude": "-3.8671875000000004",
+      "host_location": "Torre Val de San Pedro Spain",
+      "id": 18
+    },
+    {
+      "cityName": "Marvdasht",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "29.881575791402938",
+      "longitude": "52.80212042420453",
+      "host_location": "Marvdasht Iran (Islamic Republic of)",
+      "id": 19
     }
   ]
 }

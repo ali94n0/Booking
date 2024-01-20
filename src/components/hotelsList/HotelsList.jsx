@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Loader from "../Loader/Loader";
 
@@ -20,12 +21,13 @@ const HotelsList = () => {
 export default HotelsList;
 
 const HotelItem = ({item})=>{
-    return<div className="locationItem">
+    return<Link to={`hotels/${item.id}`}>
+    <div className="locationItem">
         <img src={item.picture_url.url} alt={item.name}/>
         <div className="locationItemDesc">
             <p className="location">{item.smart_location}</p>
             <p className="name">{item.name}</p>
             <p className="price">€&nbsp;{item.price}&nbsp;<span>night</span></p>
         </div>
-    </div>
+    </div></Link>
 }

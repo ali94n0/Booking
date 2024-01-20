@@ -12,7 +12,7 @@ const HotelsPage = () => {
 
     return (
         <div className="searchList">
-            <h3>Search Results ({hotels.length})</h3>
+            <h2>Search Results ({hotels.length})</h2>
  {hotels.map(item => <HotelsItem key={item.id} item={item} currentHotel={currentHotel}/>)} 
         </div>
     );

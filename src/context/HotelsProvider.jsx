@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 
 const HotelsContext = createContext()
-const BASE_URL = "http://localhost:5000/hotels"
+const BASE_URL = "http://localhost:5000"
 
 export default function HotelsProvider({children}){
     const [searchParams,setSearchParams] = useSearchParams()
@@ -18,7 +18,7 @@ export default function HotelsProvider({children}){
 const getSingleHotel = async(id)=>{
     setIsCurrHotelLoading(true)
     try {
-        const {data} = await axios.get(`${BASE_URL}/${id}`)
+        const {data} = await axios.get(`${BASE_URL}/hotels/${id}`)
         setCurrentHotel(data)
         setIsCurrHotelLoading(false)
     } catch (error) {
@@ -27,7 +27,7 @@ const getSingleHotel = async(id)=>{
     }
 }
 
-    const {isLoading,data}=useFetch(BASE_URL,`q=${destination || ""}&accommodates_gte=${options?.room || 1}`);
+    const {isLoading,data}=useFetch(`${BASE_URL}/hotels`,`q=${destination || ""}&accommodates_gte=${options?.room || 1}`);
 
     return <HotelsContext.Provider value={{isLoading,data,currentHotel,isCurrHotelLoading,getSingleHotel}} >
         {children}
