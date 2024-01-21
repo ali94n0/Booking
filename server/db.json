@@ -1352,15 +1352,6 @@
       "id": 10
     },
     {
-      "cityName": "’Ain Mabed",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "34.74161249883172",
-      "longitude": "3.144545423621202",
-      "host_location": "’Ain Mabed Algeria",
-      "id": 12
-    },
-    {
       "cityName": "Krokom",
       "country": "Sweden",
       "countryCode": "SE",
@@ -1397,15 +1388,6 @@
       "id": 17
     },
     {
-      "cityName": "Torre Val de San Pedro",
-      "country": "Spain",
-      "countryCode": "ES",
-      "latitude": "41.00477542222949",
-      "longitude": "-3.8671875000000004",
-      "host_location": "Torre Val de San Pedro Spain",
-      "id": 18
-    },
-    {
       "cityName": "Marvdasht",
       "country": "Iran (Islamic Republic of)",
       "countryCode": "IR",
@@ -1413,6 +1395,69 @@
       "longitude": "52.80212042420453",
       "host_location": "Marvdasht Iran (Islamic Republic of)",
       "id": 19
+    },
+    {
+      "cityName": "Dorndorf",
+      "country": "Germany",
+      "countryCode": "DE",
+      "latitude": "50.82502352402512",
+      "longitude": "10.107421875000002",
+      "host_location": "Dorndorf Germany",
+      "id": 20
+    },
+    {
+      "cityName": "Ash Shiḩaniyah",
+      "country": "Qatar",
+      "countryCode": "QA",
+      "latitude": "25.331614221401054",
+      "longitude": "51.19628906250001",
+      "host_location": "Ash Shiḩaniyah Qatar",
+      "id": 21
+    },
+    {
+      "cityName": "Gharyan",
+      "country": "Libya",
+      "countryCode": "LY",
+      "latitude": "30.90929451672016",
+      "longitude": "13.491210937500002",
+      "host_location": "Gharyan Libya",
+      "id": 22
+    },
+    {
+      "cityName": "Ljungby",
+      "country": "Sweden",
+      "countryCode": "SE",
+      "latitude": "56.8053897171152",
+      "longitude": "13.491210937500002",
+      "host_location": "Ljungby Sweden",
+      "id": 23
+    },
+    {
+      "cityName": "Feuchter Forst",
+      "country": "Germany",
+      "countryCode": "DE",
+      "latitude": "49.38773663303067",
+      "longitude": "11.25",
+      "host_location": "Feuchter Forst Germany",
+      "id": 25
+    },
+    {
+      "cityName": "Klosterneuburg",
+      "country": "Austria",
+      "countryCode": "AT",
+      "latitude": "48.288675734823855",
+      "longitude": "16.21958374505927",
+      "host_location": "Klosterneuburg Austria",
+      "id": 26
+    },
+    {
+      "cityName": "Athlone",
+      "country": "Ireland",
+      "countryCode": "IE",
+      "latitude": "53.440627539922914",
+      "longitude": "-7.910156250000001",
+      "host_location": "Athlone Ireland",
+      "id": 27
     }
   ]
 }

@@ -1,61 +1,76 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useReducer } from "react";
 import axios from "axios";
 
 const bookmarkContext = createContext();
-const BASE_URL = "http://localhost:5000"
+const BASE_URL = "http://localhost:5000";
+
+const initialState = {
+    bookmarks:[],
+    currentBookmark:null,
+    isLoading:false,
+    error:null,
+}
+
+const bookmarkReducer = (state,action)=>{
+    switch (action.type) {
+        case "pending":return{...state,isLoading:true}
+        case "bookmarks/loaded":return{...state,isLoading:false,bookmarks:action.payload}
+        case "bookmark/loaded":return{...state,isLoading:false,currentBookmark:action.payload}
+        case "bookmark/deleted":return{...state,isLoading:false,bookmarks:state.bookmarks.filter(item=>item.id !== action.payload)}
+        case "bookmark/added":return{...state,isLoading:false,bookmarks:[...state.bookmarks,action.payload]}
+        case "rejected":return{...state,isLoading:false,error:action.payload}
+    
+        default: throw new Error("action not found")
+    }
+}
 
 export default function BookmarksProvider({children}){
-    const[bookmarks,setBookmarks] = useState(null)
-    const [isLoading,setIsLoading] = useState(false)
-    const [currentBookmark,setCurrentBookmark]= useState(null)
-    const [error,setError] = useState(null)
+    
+const [{bookmarks,currentBookmark,isLoading,error},dispatch] = useReducer(bookmarkReducer,initialState)
 
 
     const getAllBookmarks =async()=>{
-    setIsLoading(true);
+    dispatch({type:"pending"});
     try {
         const {data} = await axios.get(`${BASE_URL}/bookmarks`)
-        setBookmarks(data)
+        dispatch({type:"bookmarks/loaded",payload:data})
     } catch (error) {
-        setError(error.message)
-    }finally{
-        setIsLoading(false)
+        dispatch({type:"rejected",payload:error.message})
     }
     }
 
     const getSingleBookmark= async(id)=>{
-        setIsLoading(true);
+        
+        if(Number(id) === currentBookmark.id)return;
+        dispatch({type:"pending"});
         try {
             const{data} = await axios.get(`${BASE_URL}/bookmarks/${id}`)
-            setCurrentBookmark(data)
+            dispatch({type:"bookmark/loaded",payload:data})
         } catch (error) {
-            setError(error.message)
-        }finally{
-            setIsLoading(false)
+            dispatch({type:"rejected",payload:error.message})
         }
 
     }
 
     const DeleteBookmark = async(id)=>{
-        setIsLoading(true);
+        dispatch({type:"pending"})
         try {
             const {data} = await axios.delete(`${BASE_URL}/bookmarks/${id}`)
-            setBookmarks(prev => prev.filter(item => item.id !== id))
+            dispatch({type:"bookmark/deleted",payload:id})
 
         } catch (error) {
-            setError(error.message)
-        }finally{setIsLoading(false)}
+            dispatch({type:"rejected",payload:error.message})
+        }
     }
 
     const addNewBookmark = async(bookmark)=>{
-        setIsLoading(true)
+        dispatch({type:"pending"})
         try {
             const {data} = await axios.post(`${BASE_URL}/bookmarks`,bookmark)
-            setBookmarks((prev)=>[...prev,data])
+            dispatch({type:"bookmark/added",payload:data})
+            dispatch({type:"bookmark/loaded" , payload:data})
         } catch (error) {
-            setError(error.message)
-        }finally{
-            setIsLoading(false)
+            dispatch({type:"rejected",payload:error.message})
         }
     }
 

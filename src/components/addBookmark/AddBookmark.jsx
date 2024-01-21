@@ -50,6 +50,7 @@ function AddBookmark(props) {
         setCityName("")
         setCountry("")
         setCountryCode("")
+        navigate("/bookmarks")
         
     }
 
