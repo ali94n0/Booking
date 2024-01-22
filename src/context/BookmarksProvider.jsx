@@ -41,7 +41,7 @@ const [{bookmarks,currentBookmark,isLoading,error},dispatch] = useReducer(bookma
 
     const getSingleBookmark= async(id)=>{
         
-        if(Number(id) === currentBookmark.id)return;
+        if(Number(id) === currentBookmark?.id)return;
         dispatch({type:"pending"});
         try {
             const{data} = await axios.get(`${BASE_URL}/bookmarks/${id}`)

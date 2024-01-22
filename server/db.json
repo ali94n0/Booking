@@ -1325,24 +1325,6 @@
   ],
   "bookmarks": [
     {
-      "cityName": "Abalessa",
-      "country": "Algeria",
-      "countryCode": "DZ",
-      "latitude": "23.18455079512732",
-      "longitude": "3.795523257510883",
-      "host_location": "Abalessa Algeria",
-      "id": 1
-    },
-    {
-      "cityName": "Hamburg",
-      "country": "Germany",
-      "countryCode": "DE",
-      "latitude": "53.46189043285914",
-      "longitude": "9.980046153099176",
-      "host_location": "Hamburg Germany",
-      "id": 8
-    },
-    {
       "cityName": "Mareil-en-France",
       "country": "France",
       "countryCode": "FR",
@@ -1458,6 +1440,24 @@
       "longitude": "-7.910156250000001",
       "host_location": "Athlone Ireland",
       "id": 27
+    },
+    {
+      "cityName": "Timokten",
+      "country": "Algeria",
+      "countryCode": "DZ",
+      "latitude": "27.644606381943326",
+      "longitude": "0.8349609375000001",
+      "host_location": "Timokten Algeria",
+      "id": 28
+    },
+    {
+      "cityName": "Marvdasht",
+      "country": "Iran (Islamic Republic of)",
+      "countryCode": "IR",
+      "latitude": "29.935899971224064",
+      "longitude": "52.888302053390824",
+      "host_location": "Marvdasht Iran (Islamic Republic of)",
+      "id": 30
     }
   ]
 }

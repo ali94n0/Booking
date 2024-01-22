@@ -51,9 +51,7 @@ const Header = () => {
     
     return (
         <div className="header">
-            <div>
-                <NavLink to={"/bookmarks"} className={({isActive})=>isActive ? "active" : ""}>Bookmarks</NavLink>
-            </div>
+            
             <div className="headerSearch">
                 <div className="headerSearchItem">
                     <MdLocationOn className="headerIcon locationIcon"/>
@@ -88,10 +86,13 @@ const Header = () => {
                 </div>
             </div>
             <div>
-                {isAuth ? <button onClick={()=>logout()}>
-                    <HiLogout/>
+                <NavLink to={"/bookmarks"} className={({isActive})=>isActive ? "active navbarLink" : "navbarLink"}>Bookmarks</NavLink>
+            </div>
+            <div>
+                {isAuth ? <button className="logoutBtn" onClick={()=>logout()}>
                     {user.name}
-                </button> : <NavLink to={"/login"} className={({isActive})=>isActive ? "active" : ""}>Login</NavLink>}
+                    <HiLogout className="logout icon"/>
+                </button> : <NavLink to={"/login"} className={({isActive})=>isActive ? "active navbarLink" : "navbarLink"}>Login</NavLink>}
             
             </div>
         </div>

@@ -280,11 +280,6 @@
   border-radius: 1rem;
 }
 
-@media screen and (min-width: 768px) {
-  .sidebar {
-    width: 50%;
-  }
-}
 
 /* bookmark page */
 .bookmarkList {
@@ -367,11 +362,15 @@
   right: 1rem;
   top: 50%;
 }
-
-a.active {
+  
+.navbarLink{padding: 5px;}
+.active {
   color: var(--primary-600);
   font-weight: 700;
+  border-bottom: solid 3px var(--primary-600);
+  
 }
+
 
 .loginContainer {
   margin: 2rem auto;
@@ -391,6 +390,58 @@ a.active {
 
 .icon.logout {
   color: var(--rose-500);
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  margin: 5px;
+}
+.logoutBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 50%;
+  }}
+  @media screen and (max-width: 768px){
+    .header{border-bottom: solid 1px rgb(181, 182, 184);
+    padding-bottom: 20px;}
+  .header , .headerSearch {flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerSearchItem{width: 100%;
+  justify-content: center;
+}
+.headerSearchItem input , .dateDropDown , .guestOptionsDropDown , .headerSearchBtn {width: 66%;}
+
+.headerSearchItem .headerIcon{margin: 5px 20px;}
+.guestOptionsDropDown {padding: 10px 30px;}
+  .headerSearchItem .seperator {display: none;}
+.navbarLink {padding: 10px 20px;}
+.appLayout{
+  flex-direction: column;
+
+  align-items: center;
+  width: 100%;
+}
+.sidebar , .mapContainer{width: 90%;}
+.mapContainer{height: 60%;
+  flex: none;
+  border-top: solid 2px rgb(181, 182, 184);
+  margin-top: 5px;}
+
+  .mapContainer button.getLocation{
+    bottom: unset;
+    left: unset;
+    top: 1rem;
+    right: 1rem;
+  }
+  .rdrCalendarWrapper{left: 1rem;}
 }
