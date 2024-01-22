@@ -2,7 +2,7 @@ import { createContext, useContext, useReducer } from "react";
 import axios from "axios";
 
 const bookmarkContext = createContext();
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://booking-json-server-ivory.vercel.app";
 
 const initialState = {
     bookmarks:[],

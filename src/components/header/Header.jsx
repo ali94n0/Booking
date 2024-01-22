@@ -6,7 +6,7 @@ import 'react-date-range/dist/theme/default.css';
 import { DateRange } from 'react-date-range'; 
 import { format } from "date-fns";
 import useOutsideClick from "../../hooks/useOutsideClick";
-import { Link, NavLink, createSearchParams, useNavigate, useSearchParams } from "react-router-dom";
+import {  NavLink, createSearchParams, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthProvider";
 
 const Header = () => {

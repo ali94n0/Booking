@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 
 const HotelsContext = createContext()
-const BASE_URL = "http://localhost:5000"
+const BASE_URL = "https://booking-json-server-ivory.vercel.app"
 
 export default function HotelsProvider({children}){
     const [searchParams,setSearchParams] = useSearchParams()
