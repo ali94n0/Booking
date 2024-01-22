@@ -4,7 +4,7 @@ import Loader from "../Loader/Loader";
 
 
 const HotelsList = () => {
-    const{isLoading,data}=useFetch("http://localhost:5000/hotels");
+    const{isLoading,data}=useFetch("https://booking-json-server-ivory.vercel.app/hotels");
 
     // if(isLoading)return<p>Loading data...</p>
     return (
